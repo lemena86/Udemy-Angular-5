@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-success-alert></app-success-alert>
+    </div>
+    <div class="col-xs-12">
+      <app-warning-alert ></app-warning-alert>
+    </div>
+    <div class="col-xs-12">
+      <input type="text" [(ngModel)] = 'username'>
+      <p>{{username}}</p>
+    </div>
+    <div class="col-xs-12">
+      <button class="btn btn-primary" [disabled]="usernameIsEmpty()" (click)="onResetUsername()">Reset</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onDisplayDetails()">Display Details</button>
+      <p *ngIf="showParagraph">Secret Password = tuna</p>
+      <ul>
+        <li
+          *ngFor="let l of logButtonClicks; let i = index;"
+          [ngStyle]="{backgroundColor: i>3 ? 'blue': ''}"
+          [ngClass]="{'whiteColor' : i>3}">
+            {{l}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>;
