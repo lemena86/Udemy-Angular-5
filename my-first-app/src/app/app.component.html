@@ -29,4 +29,8 @@
       </ul>
     </div>
   </div>
+
+  <app-game-control (firedNumber)="onFiredNumer($event)"></app-game-control>
+  <app-odd-control *ngFor="let n of oddNumbers" [number]="n"></app-odd-control>
+  <app-even-control *ngFor="let n of evenNumbers" [number]="n"></app-even-control>
 </div>;
