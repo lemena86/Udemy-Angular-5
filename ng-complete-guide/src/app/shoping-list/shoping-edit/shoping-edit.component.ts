@@ -20,7 +20,7 @@ export class ShopingEditComponent implements OnInit {
 
   onAddIngredient() {
     const name = this.nameInput.nativeElement.value;
-    const amount = this.nameInput.nativeElement.value;
+    const amount = this.amountInput.nativeElement.value;
     this.shopingListService.addIngredient(new Ingredient(name, amount));
   }
 }
