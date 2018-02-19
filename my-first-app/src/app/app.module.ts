@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuccessAlertComponent } from './components/success-alert/success-alert.component';
 import { WarningAlertComponent } from './components/warning-alert/warning-alert.component';
 import { GameControlComponent } from './components/game-control/game-control.component';
@@ -13,6 +13,9 @@ import { ActiveUsersComponent } from './components/active-users/active-users.com
 import { InactiveUsersComponent } from './components/inactive-users/inactive-users.component';
 import { CounterService } from './services/counter.service';
 import { UserService } from './services/user.service';
+import { FormTdTestComponent } from './components/form-td-test/form-td-test.component';
+import { FormReactiveComponent } from './components/form-reactive/form-reactive.component';
+import { FormReactiveTestComponent } from './components/form-reactive-test/form-reactive-test.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +26,15 @@ import { UserService } from './services/user.service';
     EvenControlComponent,
     OddControlComponent,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    FormTdTestComponent,
+    FormReactiveComponent,
+    FormReactiveTestComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [UserService, CounterService],
   bootstrap: [AppComponent]
