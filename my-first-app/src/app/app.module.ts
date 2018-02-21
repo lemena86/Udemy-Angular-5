@@ -16,6 +16,9 @@ import { UserService } from './services/user.service';
 import { FormTdTestComponent } from './components/form-td-test/form-td-test.component';
 import { FormReactiveComponent } from './components/form-reactive/form-reactive.component';
 import { FormReactiveTestComponent } from './components/form-reactive-test/form-reactive-test.component';
+import { PipesAssigmentComponent } from './components/pipes-assigment/pipes-assigment.component';
+import { ReverseStringPipe } from './pipes/reverse-string.pipe';
+import { SortPipePipe } from './pipes/sort-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { FormReactiveTestComponent } from './components/form-reactive-test/form-
     InactiveUsersComponent,
     FormTdTestComponent,
     FormReactiveComponent,
-    FormReactiveTestComponent
+    FormReactiveTestComponent,
+    PipesAssigmentComponent,
+    ReverseStringPipe,
+    SortPipePipe
   ],
   imports: [
     BrowserModule,
